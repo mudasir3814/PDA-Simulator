@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from collections import deque
 
-app = Flask(__name__, static_folder="static", template_folder="templates")
+app = Flask(__name__, static_folder="static", template_folder=".")
 
 # ---------- PDA DEFINITIONS ----------
 def pda_balanced_parentheses():
@@ -276,4 +276,5 @@ def simulate():
     return jsonify(result)
 
 if __name__ == "__main__":
+
     app.run(debug=True)
