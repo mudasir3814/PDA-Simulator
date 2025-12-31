@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PDA Simulator</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>PDA Simulator — NPDA Step Visualizer</h1>
+
+    <div class="controls">
+      <label for="pdaSelect">Choose PDA:</label>
+      <select id="pdaSelect"></select>
+
+      <label for="inputStr">Input string:</label>
+      <input id="inputStr" placeholder=" " />
+
+      <button id="runBtn">Run</button>
+      <button id="stepBtn">Step</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <div id="statusText" class="status">Status: waiting</div>
+
+    <div class="visual">
+      <div class="diagram">
+        <h3>State Diagram</h3>
+        <svg id="pdaDiagram" width="400" height="220"></svg>
+      </div>
+
+      <div class="stack-trace">
+        <h3>Stack Visualization</h3>
+        <div id="stackDisplay" class="stack-box"></div>
+      </div>
+
+      <div class="trace">
+        <h3>Trace</h3>
+        <div id="traceBox"></div>
+      </div>
+
+      <div class="details">
+        <h3>Current Step</h3>
+        <div id="currentStep"></div>
+      </div>
+    </div>
+
+    <footer>
+      <small>Project: PDA Expression Parser — Flask + HTML/CSS/JS</small>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
